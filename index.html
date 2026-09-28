@@ -16,7 +16,7 @@
 
     <!-- Header -->
     <header class="bg-blue-600 text-white shadow-md py-8 px-4 text-center">
-        <h1 class="text-3xl font-bold mb-2"> ศูนย์ดาวน์โหลดไดรเวอร์เครื่องพิมพ์</h1>
+        <h1 class="text-3xl font-bold mb-2">ศูนย์ดาวน์โหลดไดรเวอร์เครื่องพิมพ์</h1>
         <p class="text-blue-100 text-sm">รวบรวมไดรเวอร์ Printer สำหรับดาวน์โหลดภายนอกวงแลน</p>
     </header>
 
@@ -26,54 +26,91 @@
         <!-- ช่องค้นหา -->
         <div class="mb-6">
             <input type="text" id="searchInput" onkeyup="filterDrivers()" 
-                placeholder=" พิมพ์ชื่อรุ่นปริ้นเตอร์ เช่น HP, Canon, Epson..." 
+                placeholder="พิมพ์ชื่อรุ่นปริ้นเตอร์ เช่น FujiXerox, HP, Epson, Canon, Brother..." 
                 class="w-full p-3 pl-4 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
         </div>
 
         <!-- รายการไดรเวอร์ (ตาราง/การ์ด) -->
         <div class="space-y-4" id="driverList">
 
-            <!-- ตัวอย่างรายการที่ 1: Canon -->
+            <!-- รายการที่ 1: FujiXerox -->
             <div class="driver-card bg-white p-5 rounded-xl shadow-sm border border-gray-200 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 hover:shadow-md transition">
                 <div>
-                    <span class="bg-red-100 text-red-700 text-xs px-2.5 py-1 rounded font-semibold">FujiXerox</span>
-                    <h2 class="driver-title text-lg font-bold text-gray-800 mt-1">5335</h2>
+                    <span class="bg-orange-100 text-orange-700 text-xs px-2.5 py-1 rounded font-semibold">FujiXerox</span>
+                    <h2 class="driver-title text-lg font-bold text-gray-800 mt-1">FujiXerox Series</h2>
                     <p class="text-xs text-gray-500 mt-0.5">รองรับ: Windows 10 / 11 (64-bit)</p>
                 </div>
-                <!-- วางลิงก์ Google Drive / Cloud ใน href -->
+                <!-- วางลิงก์ไฟล์หรือโฟลเดอร์ใน href -->
                 <a href="https://drive.google.com/drive/folders/1G38AQ6tac98W_QuPTP2YGpidGg6jdcAV?usp=sharing" target="_blank" 
                    class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg text-sm font-medium text-center transition">
                    ดาวน์โหลด
                 </a>
             </div>
 
-            <!-- ตัวอย่างรายการที่ 2: Epson -->
-            <div class="driver-card bg-white p-5 rounded-xl shadow-sm border border-gray-200 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 hover:shadow-md transition">
-                <div>
-                    <span class="bg-blue-100 text-blue-700 text-xs px-2.5 py-1 rounded font-semibold">Xerox3065</span>
-                    <h2 class="driver-title text-lg font-bold text-gray-800 mt-1">3065</h2>
-                    <p class="text-xs text-gray-500 mt-0.5">รองรับ: Windows 10 / 11 (32/64-bit)</p>
-                </div>
-                <a href="https://drive.google.com/drive/folders/1NZ28eEDb0IsYWFe7jgjpZLylzYfBiuDs?usp=drive_link" target="_blank" 
-                   class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg text-sm font-medium text-center transition">
-                   ดาวน์โหลด
-                </a>
-            </div>
-
-            <!-- ตัวอย่างรายการที่ 3: HP -->
+            <!-- รายการที่ 2: HP 315-615 -->
             <div class="driver-card bg-white p-5 rounded-xl shadow-sm border border-gray-200 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 hover:shadow-md transition">
                 <div>
                     <span class="bg-cyan-100 text-cyan-800 text-xs px-2.5 py-1 rounded font-semibold">HP</span>
-                    <h2 class="driver-title text-lg font-bold text-gray-800 mt-1">LaserJet Pro M12a / M12w</h2>
+                    <h2 class="driver-title text-lg font-bold text-gray-800 mt-1">HP Ink Tank 315 / 415 / 515 / 615 Series</h2>
                     <p class="text-xs text-gray-500 mt-0.5">รองรับ: Windows 7 / 10 / 11</p>
                 </div>
-                <a href="https://drive.google.com/YOUR_FILE_LINK_3" target="_blank" 
+                <a href="https://drive.google.com/drive/folders/1CVbCUo9sIGB8S5dyYi1uUE-oypx7jpWl?usp=drive_link" target="_blank" 
                    class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg text-sm font-medium text-center transition">
                    ดาวน์โหลด
                 </a>
             </div>
 
-            <!-- สามารถก๊อปปี้บล็อกด้านบนเพิ่มตามจำนวนรุ่นที่มีได้เลย -->
+            <!-- รายการที่ 3: Epson -->
+            <div class="driver-card bg-white p-5 rounded-xl shadow-sm border border-gray-200 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 hover:shadow-md transition">
+                <div>
+                    <span class="bg-blue-100 text-blue-700 text-xs px-2.5 py-1 rounded font-semibold">Epson</span>
+                    <h2 class="driver-title text-lg font-bold text-gray-800 mt-1">Epson Series</h2>
+                    <p class="text-xs text-gray-500 mt-0.5">รองรับ: Windows 10 / 11 (32/64-bit)</p>
+                </div>
+                <a href="https://drive.google.com/drive/folders/1TD3ORXHPhGcdh7mn0IqKTx6W-jknD_YE?usp=drive_link" target="_blank" 
+                   class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg text-sm font-medium text-center transition">
+                   ดาวน์โหลด
+                </a>
+            </div>
+
+            <!-- รายการที่ 4: Canon iR ADV -->
+            <div class="driver-card bg-white p-5 rounded-xl shadow-sm border border-gray-200 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 hover:shadow-md transition">
+                <div>
+                    <span class="bg-red-100 text-red-700 text-xs px-2.5 py-1 rounded font-semibold">Canon</span>
+                    <h2 class="driver-title text-lg font-bold text-gray-800 mt-1">Canon imageRUNNER ADVANCE (iR ADV)</h2>
+                    <p class="text-xs text-gray-500 mt-0.5">รองรับ: Windows 10 / 11 (64-bit)</p>
+                </div>
+                <a href="https://drive.google.com/drive/folders/1yTl0mZyCVWqKbCeDK6LHMrt9ldnYsz97?usp=drive_link" target="_blank" 
+                   class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg text-sm font-medium text-center transition">
+                   ดาวน์โหลด
+                </a>
+            </div>
+
+            <!-- รายการที่ 5: Canon G series -->
+            <div class="driver-card bg-white p-5 rounded-xl shadow-sm border border-gray-200 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 hover:shadow-md transition">
+                <div>
+                    <span class="bg-red-100 text-red-700 text-xs px-2.5 py-1 rounded font-semibold">Canon</span>
+                    <h2 class="driver-title text-lg font-bold text-gray-800 mt-1">Canon PIXMA G Series (G1000/G2000/G3000...)</h2>
+                    <p class="text-xs text-gray-500 mt-0.5">รองรับ: Windows 7 / 10 / 11</p>
+                </div>
+                <a href="https://drive.google.com/drive/folders/1_2RpQoHAqHHmvNbZwuWiq3w_jEult06u?usp=drive_link" target="_blank" 
+                   class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg text-sm font-medium text-center transition">
+                   ดาวน์โหลด
+                </a>
+            </div>
+
+            <!-- รายการที่ 6: Brother -->
+            <div class="driver-card bg-white p-5 rounded-xl shadow-sm border border-gray-200 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 hover:shadow-md transition">
+                <div>
+                    <span class="bg-purple-100 text-purple-700 text-xs px-2.5 py-1 rounded font-semibold">Brother</span>
+                    <h2 class="driver-title text-lg font-bold text-gray-800 mt-1">Brother Series</h2>
+                    <p class="text-xs text-gray-500 mt-0.5">รองรับ: Windows 10 / 11 (32/64-bit)</p>
+                </div>
+                <a href="https://drive.google.com/drive/folders/1OM_nznJEJFOm62EVVF8emUq8bpJZa-Wk?usp=drive_link" target="_blank" 
+                   class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg text-sm font-medium text-center transition">
+                   ดาวน์โหลด
+                </a>
+            </div>
 
         </div>
     </main>
